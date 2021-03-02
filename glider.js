@@ -1,6 +1,6 @@
 new Glide(".images",{
     type: 'carousel',
-    perView: 4,
+    perView: 5,
     focusAt: 'center',
-    gap: 20,
+    gap: 10,
 }).mount();

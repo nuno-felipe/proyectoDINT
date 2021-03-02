@@ -76,7 +76,7 @@ section{
     width: 80%;
     background: linear-gradient(99.6deg, rgba(255, 255, 255, 0.48) 0.44%, rgba(255, 255, 255, 0.12) 100%);
     backdrop-filter: blur(100px);
-    border-radius: 25px;
+    border-radius: 10px;
 }
 .albums{
     display: grid;
@@ -100,6 +100,11 @@ section{
     width: 100%;
     height: 100%;
 }
+audio{
+    width: 100%;
+}
+
+
 .barra{
     display: flex;
     justify-content: space-between;
@@ -111,6 +116,10 @@ section{
     justify-content: center;
     align-items: center;
     width: 20%;
+}
+.play:hover{
+    background-color: blueviolet;
+  
 }
 .play p{
     text-align: center;
@@ -129,6 +138,78 @@ section{
     width: 90%;
 }
 /*glider*/
-.card{
-    width: 20%;
+.upcoming{
+    margin-top: 2em;
+    width: 80%;
+    text-align: center;
+}
+.glide__track{
+    width: 80%; 
+}
+.glide__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 50px;
+    padding-bottom: 2em;
+}
+.glide__slide img{
+    width: 100%;
+}
+.glide__arrows button{
+    margin: 0 5%;
+    background-color: blueviolet;
+}
+
+hr{
+    width: 80%;
+    color: indigo;
+}
+/*footer*/
+footer{
+
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.about h2{
+    width: 50%;
+
+}
+.about p{
+    width: 50%;
+    padding:2em;
+}
+footer .social-icons{
+  text-align:center;
+}
+.cp{
+    padding:2em;
+}
+.social-icons li{
+  display:inline-block;
+}
+.social-icons a{
+  color: indigo;
+  font-size:2em;
+  display:inline-block;
+  text-align:center;
+  margin-right:2em;
+}
+.social-icons a.facebook:hover{
+  color:#3b5998
+}
+.social-icons a.twitter:hover{
+  color:#00aced
+}
+.social-icons a.instagram:hover{
+  color:#ea4c89
 }
