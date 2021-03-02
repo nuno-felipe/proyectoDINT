@@ -11,17 +11,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-offset="60" data-target="#myNavbar">
     <div class="parallax">
-      <img src="./img/spinda.svg" alt="logo" />
-      <h1>xpin records</h1>
+      <img id="logo" src="./img/spinda.svg" alt="logo" />
+      <h1 id="letras">xpin records</h1>
     </div>
-    <nav>
+    <nav
+      id="myNavbar"
+      class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+    >
       <img src="/img/spinda_bn_nav.svg" alt="logo navegador" />
-      <button>Log in</button>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="#musicAnchor" class="nav-link">Music</a>
+        </li>
+        <li class="nav-item">
+          <a href="#aboutAnchor" class="nav-link">About Us!</a>
+        </li>
+        <li class="nav-item">
+          <a href="#upcomingAnchor" class="nav-link">Upcoming</a>
+        </li>
+      </ul>
     </nav>
     <section>
       <div class="info">
@@ -34,17 +58,17 @@
         </h3>
         <button>More About Us!</button>
       </div>
-      <div class="albums-rep">
+      <div id="musicAnchor" class="albums-rep">
         <div class="glass">
           <div class="albums">
             <div class="album">
-              <img src="img/album1.jpg" alt="album1" />
+              <img src="img/album1.jpg" alt="album1.mp3" />
               <p>Albúm</p>
               <p>Artista</p>
               <p>Género</p>
             </div>
             <div class="album">
-              <img src="img/img.jpg" alt="album2" />
+              <img src="img/img.jpg" alt="album2.mp3" />
               <p>Albúm</p>
               <p>Artista</p>
               <p>Género</p>
@@ -63,13 +87,17 @@
             </div>
           </div>
           <div class="reproductor">
-            <img id="imagenPrincipal" src="/img/album1.jpg" alt="imagen álbum" />
-            <audio>
-              <source id="musica" src="" type="audio/ogg">
+            <img
+              id="imagenPrincipal"
+              src="/img/album1.jpg"
+              alt="imagen álbum"
+            />
+            <audio id="rep">
+              <source id="musica" src="" type="audio/ogg" />
             </audio>
             <div class="barra">
               <div class="play">
-                <p>&#9658;</p>
+                <i class="fas fa-play"></i>
               </div>
               <div class="play_barra">
                 <progress id="bProg" value="0" max="100"></progress>
@@ -78,7 +106,39 @@
           </div>
         </div>
       </div>
-      <h2 class="upcoming">Upcoming</h2>
+      <div id="aboutAnchor" class="infoDos">
+        <div class="tarjeta">
+          <h2>Fans</h2>
+          <i class="fas fa-headphones"></i>
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis nemo placeat ab sed cupiditate sapiente, autem debitis
+            animi nulla quae aliquam accusantium, explicabo officiis natus ipsa
+            porro totam sunt voluptatem!
+          </h4>
+        </div>
+        <div class="tarjeta">
+          <h2>Artist</h2>
+          <i class="fas fa-guitar"></i>
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis nemo placeat ab sed cupiditate sapiente, autem debitis
+            animi nulla quae aliquam accusantium, explicabo officiis natus ipsa
+            porro totam sunt voluptatem!
+          </h4>
+        </div>
+        <div class="tarjeta">
+          <h2>Labels</h2>
+          <i class="fab fa-soundcloud"></i>
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis nemo placeat ab sed cupiditate sapiente, autem debitis
+            animi nulla quae aliquam accusantium, explicabo officiis natus ipsa
+            porro totam sunt voluptatem!
+          </h4>
+        </div>
+      </div>
+      <h2 id="upcomingAnchor" class="upcoming">Upcoming</h2>
       <div class="images glide">
         <div class="glide__track" data-glide-el="track">
           <div class="glide__slides">
@@ -94,7 +154,7 @@
               </p>
             </div>
             <div class="glide__slide">
-              <img src="/img/album1.jpg" alt="imagen album" />
+              <img src="/img/rave.jpg" alt="imagen album" />
               <h3>Titulo</h3>
               <p>genero</p>
               <p>
@@ -137,27 +197,38 @@
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
       <footer>
         <div class="about">
           <h2>About</h2>
-          <p>Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          <p>
+            Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
+            help the upcoming programmers with the code. Scanfcode focuses on
+            providing the most efficient code or snippets as the code wants to
+            be simple. We will help programmers build up concepts in different
+            programming languages that include C, C++, Java, HTML, CSS,
+            Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
+          </p>
         </div>
         <div class="social">
           <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+            <li>
+              <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
           </ul>
         </div>
         <div class="cp">
           <p>Copyright &copy; 2021 All Rights Reserved</p>
         </div>
-      </footer> 
+      </footer>
     </section>
     <script src="script.js"></script>
     <script src="/glider.js"></script>
   </body>
 </html>
-
-
