@@ -6,12 +6,16 @@
 :root {
     --verde: #51E877;
   }
-
 @font-face{
     src: url(./fonts/Atmos.ttf);
     font-family: atmos;
 }
-/*parallax*/
+body{
+    background: linear-gradient(180deg, #49F5D5 10.71%, #51E877 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*PARALLAX*/
 .parallax {
     display: flex;
     background-image: url("./img/hero.jpg");
@@ -21,28 +25,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
-
-    
 }
 .parallax img{
   margin-top: 15%;
-  height: 200px;
-  width: 500px;
+  width: 10em;
+
 }
 .parallax h1{
   font-family: atmos;
   color: var(--verde);
+  text-align: center;
   font-size: 10em;
   margin-bottom: 15%;
-
 } 
 
 /*NAV*/
 nav{
-    z-index: 2;
+    z-index: 3;
     background-color: white;
-    position: sticky !important;
-    top:0 !important;
+    position: sticky;
+    top:0;
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr;
     height: 50px;
@@ -52,28 +54,44 @@ nav img{
     height: 50px;
     width: 200px; 
 }
-nav button{
-    grid-column:3/3;
-    margin: 5px 25%;
-    height: 80%;
-    width: 50%;   
+nav ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+nav ul li a:hover{
+    color: var(--verde);
+    text-decoration: none;
+    
+}
+.active {
+    background-color: blueviolet;
 }
 
-/*Info*/
-section{
-    position: relative;
-    min-height: 50vh;
-    background: linear-gradient(180deg, #49F5D5 10.71%, #51E877 100%);
-}
+/*INFO*/
 .info{
-    height: 50vh;
+    height: 70vh;
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     text-align: center;
 }
-/*albums*/
+.info  h2{
+    font-size: 2em;
+}
+/*AlBUMS*/
 .glass{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,7 +111,7 @@ section{
 .album img{
     width: 95%;
 }
-/*Reproductor*/
+/*REPRODUCTOR*/
 .reproductor{
     display: flex;
     justify-content: space-between;
@@ -104,11 +122,6 @@ section{
     width: 100%;
     height: 100%;
 }
-audio{
-    width: 100%;
-}
-
-
 .barra{
     display: flex;
     justify-content: space-between;
@@ -125,13 +138,6 @@ audio{
     background-color: blueviolet;
   
 }
-.play p{
-    text-align: center;
-    font-size: 3em;
-}
-.play p:hover{
-    cursor: pointer;
-}
 .play_barra{
     display: flex;
     justify-content: center;
@@ -141,9 +147,42 @@ audio{
 #bProg{
     width: 90%;
 }
-/*glider*/
+/*INFO2*/
+.infoDos{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.tarjeta{
+    margin: 10% 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta i{
+    text-align: center;
+    margin: 1em 0;
+    font-size: 2em;
+}
+.tarjeta h4{
+    text-align: center;
+}
+.fa-headphones:hover{
+    color: #ea4c89 ;
+}
+.fa-guitar:hover{
+    color: #3b5998;
+}
+.fa-soundcloud:hover{
+    color: #ff5500;
+}
+
+/*GLIDER*/
 .upcoming{
     margin-top: 2em;
+    padding: 2em;
     width: 80%;
     text-align: center;
 }
@@ -155,7 +194,6 @@ audio{
     flex-direction: column;
     align-items: center;
     align-content: center;
-    width: 50px;
     padding-bottom: 2em;
 }
 .glide__slide img{
@@ -168,33 +206,9 @@ audio{
 
 hr{
     width: 80%;
-    color: indigo;
-}
-/*info2*/
-.infoDos{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-}
-.tarjeta{
-    padding: 5em;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-content: center;
-}
-.tarjeta i{
-    padding: 2em;
-    font-size: 2em;
-}
-.fa-headphones:hover{
-    color: #ea4c89 ;
-}
-.fa-guitar:hover{
-    color: #3b5998;
-}
-.fa-soundcloud:hover{
-    color: #ff5500;
+    border: none;
+    background-color: blueviolet;
+    height: 0.2em;
 }
 
 
@@ -207,34 +221,34 @@ footer{
     min-height: 30vh;
 }
 .about{
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
 }
-.about h2{
-    width: 50%;
-
-}
 .about p{
-    width: 50%;
-    padding:2em;
-}
-footer .social-icons{
-  text-align:center;
+    width: 80%;
+    margin: 0;
 }
 .cp{
     padding:2em;
 }
-.social-icons li{
-  display:inline-block;
+.social{
+    margin: 2em 0;
 }
+.social-icons {
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .social-icons a{
-  color: indigo;
+  color: blueviolet;
   font-size:2em;
   display:inline-block;
   text-align:center;
-  margin-right:2em;
 }
 .social-icons a.facebook:hover{
   color:#3b5998
@@ -252,7 +266,8 @@ footer .social-icons{
     -webkit-animation:anim 2s infinite;
 }
 @-webkit-keyframes anim{
-    100% {-webkit-transform:rotate(360deg);}
+    100%{-webkit-transform:rotateY( 360deg);}
+
 }
 #letras{
     -webkit-animation:fadeIn ease 4s;
@@ -262,3 +277,44 @@ footer .social-icons{
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+
+
+/*mediaquerys*/
+@media (max-width: 1090px) {
+    .parallax h1{
+        font-size: 5em;
+    }
+    .glass{
+        grid-template-columns: 1fr;
+    }
+    .barra{
+        
+        height: 3em;
+    }
+}
+@media (max-width: 720px) {
+   nav{ 
+       grid-template-columns: 1fr 1fr;
+   }
+   nav img{
+    grid-column:1/2 ;
+    }
+    nav button{
+    grid-column:1/2;
+    }
+  
+}
+@media (max-width: 500px) {
+    nav{ 
+        display: flex;
+        flex-direction:column;
+        height: auto;
+    }
+    .about{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+
