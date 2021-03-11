@@ -18,7 +18,7 @@ body{
 /*PARALLAX*/
 .parallax {
     display: flex;
-    background-image: url("./img/hero.jpg");
+    background-image: url("img/hero.jpg");
     min-height: 100vh;
     background-attachment: fixed;
     background-position: 100% 100%;

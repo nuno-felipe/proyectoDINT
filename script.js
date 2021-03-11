@@ -5,11 +5,13 @@ var rep = document.getElementById('rep');
 var imagenPrincipla=document.getElementById('imagenPrincipal');
 var bProg=document.getElementById("bProg");
 var boton = document.getElementsByClassName('fas fa-play')[0];
+
+
+
+
+//AddEventListeners
 window.addEventListener("load",seleccionarImg);
 window.addEventListener("DOMContentLoaded",barraProg);
-
-
-
 /*scrollSpy*/
 document.addEventListener('DOMContentLoaded', function(){ 
     const sections = document.querySelectorAll(".anchor");
@@ -61,6 +63,8 @@ for(var i=0;i<albums.length;i++){
     albums[i].addEventListener("click", seleccionarAlbum);
 }
 
+
+//funciones
 function seleccionarAlbum(){
    imagenPrincipla.src=this.getElementsByTagName("img")[0].src;
    imagenPrincipla.alt=this.getElementsByTagName("img")[0].alt;
@@ -88,7 +92,6 @@ function seleccionarImg(){
     imagenPrincipla.alt=albums[0].getElementsByTagName("img")[0].alt;
     audios=new Audio("audios/"+imagenPrincipla.alt);
 }
-
 function iniciarMusica(){    
     if(!audios.paused){
         audios.pause();
